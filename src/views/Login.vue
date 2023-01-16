@@ -6,7 +6,7 @@
   <p>Faça o seu cadastro para realizar grandes negócios<br> nos nossos leilões e pregões.</p>
   <p style="font-weight: lighter;">É simples e rápido, basta clicar no botão.</p>
   <div class="div_register">
-  <button class="button_register btn btn-success btn-lg">Quero cadastrar</button>
+    <router-link to="/register"><button class="button_register btn btn-success btn-lg">Quero cadastrar</button></router-link>
 </div>
 </div>
 </div>
@@ -27,7 +27,11 @@
   <input v-model="senha" type="password" class="form-control" aria-label="Small" 
   aria-describedby="inputGroup-sizing-sm">
 </div>
-<p style="font-weight: lighter;">Esqueceu a senha ?</p>
+<a href="" class="text-end"><p style="font-weight: lighter;" >Esqueceu a senha ?</p></a>
+<div class="text-center">
+
+<button class="button_register btn btn-success btn-lg ">Acessar</button>
+</div>
   </div>
   </div>
 </div>
@@ -49,7 +53,7 @@ export default {
   border-radius: 5%;
 }
 h1{
-  font-family: 'Laro';
+  font-family: 'Lato';
   font-size: 30px;
   font-weight: 600;
   line-height: 1.5;
@@ -63,11 +67,12 @@ p{
 .login{
   border-radius: 5%;
   margin-left: 4%;
-  margin-top: 8%;
+  margin-top: 7%;
+  height: 83%;
 
 }
 .h1_login{
-margin-top: -5%;
+margin-top: -3%;
 }
 .row{
   margin-right: 0;
@@ -78,6 +83,14 @@ margin-top: -5%;
   color: black;
   font-family: 'Laro';
   font-weight: bold;
+}
+.button_register:hover{
+  background-color: var(--color-background-button);
+
+}
+a:-webkit-any-link {
+  text-decoration: none;
+  color: black;
 }
 .div_register{
   margin-top: 5%;
