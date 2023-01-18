@@ -11,10 +11,10 @@
         <div  class="container mapa">
             <span class="title_map">MAPA DO SITE</span><br><br>
            <a href="#"><span>Home</span></a><br>
-           <a href=""><span>Agenda de leilões</span></a><br>
-           <a href=""><span>Pregão online</span></a><br>
-            <a href=""><span>Resultados</span></a><br>
-            <a href=""><span>Contato</span></a>
+            <router-link to="/auctionSchedule"><a href=""><span>Agenda de leilões</span></a></router-link><br>
+            <router-link to="/onlineAuction"><a href=""><span>Pregão online</span></a></router-link><br>
+            <router-link to="/results"><a href=""><span>Resultados</span></a><br></router-link>
+            <router-link to="/contacts"><a href=""><span>Contato</span></a></router-link>
          </div> 
          <div  class="container info">
             <span class="title_map">LINKS ÚTEIS</span><br><br>

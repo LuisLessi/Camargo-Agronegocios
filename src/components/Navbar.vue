@@ -1,6 +1,6 @@
 <template>
   <div class="header-color">
-   <span class="header">0800 049 2000 | atendimento@camargoagronegocios.com.br
+   <span class="header">(49) 98402-3763 | atendimento@camargoagronegocios.com.br
     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
    <a class="icons" target="_blank" href="https://www.facebook.com/camargoagronegocios">
@@ -8,6 +8,9 @@
     &nbsp&nbsp&nbsp
     <a class="icons" target="_blank" href="https://www.instagram.com/camargoagronegocios/">
     <font-awesome-icon :icon="['fa-brands', 'fa-instagram']" /></a>
+    &nbsp&nbsp&nbsp
+    <a class="icons" target="_blank" href="https://www.youtube.com/channel/UCXhV15UcX9CMUBvYNC9xCSQ">
+    <font-awesome-icon :icon="['fa-brands', 'fa-youtube']" /></a>
   </span>
     </div>
      <nav class="navbar navbar-expand-lg navbar-light nav-color">
@@ -24,13 +27,13 @@
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
       <li class="nav-item">
-        <a class="nav-link" href="#">Agenda de Leilões</a>
+        <router-link to="/auctionSchedule"><a class="nav-link" href="auctionSchedule">Agenda de Leilões</a></router-link>
       </li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
       <li class="nav-item">
-        <a class="nav-link" href="#">Pregão Online</a>
+        <router-link to="/onlineAuction"><a class="nav-link" href="onlineAuction">Pregão Online</a></router-link>
       </li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
       <li class="nav-item">
-        <a class="nav-link" href="#">Resultados</a>
+        <router-link to="/results"><a class="nav-link" href="#">Resultados</a></router-link>
       </li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
       <li class="nav-item">
         <router-link to="/login"> <a class="nav-link" href="login">Meu Cadastro</a></router-link>
@@ -55,6 +58,7 @@ export default {
 .header-color{
 
   background-color: var( --color-background-navbar2);
+  height: 35px;
 
 }
 .header{
@@ -62,7 +66,7 @@ export default {
   display:table;
   color: white;
   font-family: 'Lato regular';
-  font-size: 15px;
+  font-size: 20px;
   
 
 }
