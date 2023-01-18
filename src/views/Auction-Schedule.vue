@@ -50,6 +50,7 @@
 
             <div class="col-sm-4">
                 <div class="card">
+                    <RouterLink to="/auctionDetails">
                     <div class="card-body">
                         <div class="d-flex">
                             <img src="../assets/logo-rodape.png" class="card-img-top">
@@ -87,11 +88,13 @@
 
                         <a href="#" class="btn btn-primary btn-lg mt-3" style="margin-left: 20%;">VER DATALHES</a>
                     </div>
+                </RouterLink>
                 </div>
             </div>
 
             <div class="col-sm-4">
                 <div class="card">
+                    <RouterLink to="/auctionDetails">
                     <div class="card-body">
                         <div class="d-flex">
                             <img src="../assets/logo-rodape.png" class="card-img-top">
@@ -129,6 +132,7 @@
 
                         <a href="#" class="btn btn-primary btn-lg mt-3" style="margin-left: 20%;">VER DATALHES</a>
                     </div>
+                </RouterLink>
                 </div>
             </div>
 

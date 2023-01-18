@@ -1,13 +1,13 @@
 <template>
   <Carousel_home/>
   <div class='row ' >
-    <div class='col-6'>
+    <div class='col-sm-6 '>
   <div class="card" style="width: 36rem;">
   <img class="card-img-top" src="../assets/leilao-app.png" alt="Card image cap">
   
 </div>
 </div>
-<div class='col-6'>
+<div class='col-sm-6 '>
 <div class="card pt-5 pb-5" style="width: 36rem;">
   <router-link to="/login"><img class="card-img-sub" src="../assets/card_cadasro.png" alt="Card image cap"></router-link>
 </div>
