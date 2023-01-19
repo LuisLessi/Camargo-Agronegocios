@@ -16,22 +16,22 @@
     </div>
 
     <div class='row mt-5 apps'>
-        <div class='col-6'>
-            <div class="card-app" style="width: 36rem; cursor: pointer;">
+        <div class='col-sm-6'>
+            <div class="card-app" style=" cursor: pointer;">
                 <img class="card-img-top" src="../assets/leilao-app.png" alt="Card image cap">
 
             </div>
         </div>
-        <div class='col-6'>
-            <div class="card-app pt-5 pb-5 mt-4" style="width: 36rem; background-color: white; height: 13.5rem;">
+        <div class='col-sm-6'>
+            <div class="card-app pt-5 pb-5 mt-4" style="background-color: white; height: 15.7rem;">
                 <router-link to="/login"><img class="card-img-sub" src="../assets/card_cadasro.png"
                         alt="Card image cap"></router-link>
             </div>
         </div>
     </div>
     <h1 style="margin-left: 9%;">PARCEIROS</h1>
-    <div>
-        <img src="../assets/crediserra.png" style="margin-left: 9%;">
+    <div class="patrocinadores mb-5">
+        <img src="../assets/crediserra.png" class="img-patrocinadores">
     </div>
 </template>
 
@@ -74,5 +74,18 @@ h1 {
 .card-img-sub{
 max-width: 60%;
 margin-left: 20%;
+}
+.patrocinadores{
+    margin-left: 9%
+}
+@media only screen and (max-width: 1024px) {
+.patrocinadores{
+    margin-left: 9%;
+
+}
+.img-patrocinadores{
+max-width: 40%;
+
+}
 }
 </style>

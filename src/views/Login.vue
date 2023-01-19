@@ -1,7 +1,7 @@
 <template>
-    <div class='row ' >
-    <div class='col-6 pt-5 pb-5'>
-  <div class="card register" style="width: 36rem;">
+    <div class='row' >
+    <div class='col-sm-6 pt-5 pb-5'>
+  <div class="card register">
   <h1>Olá, seja bem vindo a nossa <br>plataforma de negócios.</h1><br>
   <p>Faça o seu cadastro para realizar grandes negócios<br> nos nossos leilões e pregões.</p>
   <p style="font-weight: lighter;">É simples e rápido, basta clicar no botão.</p>
@@ -10,8 +10,8 @@
 </div>
 </div>
 </div>
-<div class='col-6'>
-<div class="card pt-5 pb-5 login" style="width: 36rem;">
+<div class='col-sm-6'>
+<div class="card pt-5 pb-5 login">
   <h1 style="color: black;" class="h1_login">Já sou cadastrado</h1><br>
   <p style="font-weight: lighter;">Informe os dados para acessar</p>
   <div class="container">
@@ -51,6 +51,7 @@ export default {
   margin-left: 20%;
   color: white;
   border-radius: 5%;
+  width: 36rem;
 }
 h1{
   font-family: 'Lato';
@@ -69,7 +70,7 @@ p{
   margin-left: 4%;
   margin-top: 7%;
   height: 83%;
-
+  width: 36rem;
 }
 .h1_login{
 margin-top: -3%;
@@ -97,6 +98,18 @@ a:-webkit-any-link {
   margin-left: 35%;
   margin-bottom: 20%;
   max-width: 80%;
+
+}
+@media only screen and (max-width: 1024px) {
+  .login{
+  margin-left: 0%;
+  width: 24rem;
+
+}
+.register{
+  margin-left: 0%;
+  width: 24rem;
+}
 
 }
 </style>

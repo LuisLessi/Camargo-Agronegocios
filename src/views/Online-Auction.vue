@@ -16,14 +16,14 @@
     </div>
 
     <div class='row mt-5 apps'>
-        <div class='col-6'>
-            <div class="card-app" style="width: 36rem; cursor: pointer;">
+        <div class='col-sm-6'>
+            <div class="card-app" style="cursor: pointer;">
                 <img class="card-img-top" src="../assets/leilao-app.png" alt="Card image cap">
 
             </div>
         </div>
-        <div class='col-6'>
-            <div class="card-app pt-5 pb-5 mt-4" style="width: 36rem; background-color: white; height: 13.5rem;">
+        <div class='col-sm-6'>
+            <div class="card-app pt-5 pb-5 mt-4" style="background-color: white; height: 15.7rem;">
                 <router-link to="/login"><img class="card-img-sub" src="../assets/card_cadasro.png"
                         alt="Card image cap"></router-link>
             </div>

@@ -76,20 +76,26 @@ a:-webkit-any-link {
 }
 
 .logo{
-max-width: 60%;
+max-width: 70%;
 margin-left: 28%;
 }
 
 li{
   font-family: 'Lato regular';
-  font-size: 15px;
+  font-size: 20px;
      float: left;
-     margin: 15px; 
+     margin: 25px; 
      border-bottom: -10px;
 }
 li:hover{
   background-color: var(--color-background-button);
   border-radius: 5%;
   height: 100%;
+}
+@media only screen and (max-width: 1024px) {
+  .header{
+    font-size: 13px;
+
+  }
 }
 </style>

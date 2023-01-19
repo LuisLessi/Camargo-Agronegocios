@@ -3,7 +3,7 @@
     <body>
         <div class="container">
             <div class="row">
-                <div class="col-6 col-md-6">
+                <div class="col-sm-6">
                     <h1 class="mt-5" style="color: white; font-size: 30px;">Fale Conosco</h1>
                     <p>Você precisa de mais informações? Verifique o que outras pessoas estão dizendo sobre nosso
                         produto.</p>
@@ -23,7 +23,7 @@
                     </div>
                 </div>
 
-                <div class="col-6 col-md-6">
+                <div class="col-sm-6">
                     <div class="card mt-5 mb-5" style="background-color: white;">
                         <div class="row">
                             <div class="col-5 col-md-5 mt-3 ms-4">
@@ -33,7 +33,7 @@
 
 
                             </div>
-                            <div class="col-5 col-md-5 mt-3 ms-5">
+                            <div class="col-5 col-md-5 mt-3  assunto">
                                 <label for="">Assunto*</label><br>
                                 <input v-model="assunto" type="text" class="form-control"
                                     aria-describedby="inputGroup-sizing-sm" placeholder="Assunto">
@@ -132,5 +132,18 @@ p {
 iframe{
     width: 119.5%;
     height: 190px;
+}
+.assunto{
+    margin-left: 8%;
+}
+@media only screen and (max-width: 1024px) {
+    iframe{
+        margin-left: -5%;
+        width: 108%;
+
+    }
+    body {
+    background-size: 424%;
+}
 }
 </style>

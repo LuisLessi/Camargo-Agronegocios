@@ -2,7 +2,7 @@
 
     <footer id="footer">
         <div class="container pt-5 pb-5">
-        <div class="row mb-4">
+        <div class="row">
         <div  class="container logo_sub">
         <img src="../assets/logo-rodape.png" alt="logo" class="logo">
         <br>
@@ -89,5 +89,20 @@
     height: 1px;
     margin-top: -20%;
    }
-    
+   @media only screen and (max-width: 1024px) {
+    .logo{
+        max-width: 40%;
+    }
+    .logo_sub{
+        margin-top: -90%;
+        margin-bottom: -20%;
+    }
+    .mapa{
+        margin-left: 0%;
+    }
+    #footer{
+        height: 740px;
+        margin-bottom: -20%;
+    }
+}
     </style>
