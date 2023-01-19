@@ -76,15 +76,15 @@ a:-webkit-any-link {
 }
 
 .logo{
-max-width: 70%;
+max-width: 60%;
 margin-left: 28%;
 }
 
 li{
   font-family: 'Lato regular';
-  font-size: 20px;
+  font-size: 15px;
      float: left;
-     margin: 25px; 
+     margin: 15px; 
      border-bottom: -10px;
 }
 li:hover{
@@ -97,5 +97,6 @@ li:hover{
     font-size: 13px;
 
   }
+  
 }
 </style>
