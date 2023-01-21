@@ -1,5 +1,9 @@
 <template>
   <Carousel_home/>
+  <h1>Cidades</h1>
+  <ul li v-for="cidade in cidades" :key="cidade.id">
+        <li v-if="cidade.letter == 'GO'">{{ cidade.title }}</li>
+  </ul>
   <div class='row ' >
     <div class='col-sm-6 '>
   <div class="card" >
@@ -16,16 +20,30 @@
 </template>
 
 <script>
-
+import api from "@/services/api"
+import cidades from "@/services/cidades"
+import axios from "axios"
+import { onMounted } from "vue"
 import Carousel_home from '../components/Carousel_home.vue'
 
 export default {
   name: 'HomeView',
   components: {
     Carousel_home
-  }
+  },
+  data(){
+    return{
+      cidades:[]
+    }
+  },
+ async mounted(){
+  let cidades = await axios.get("https://bis365.com.br/bid365/api/v1/cities");
+  console.log(cidades.data.data)
+  this.cidades = cidades.data.data
+ }
 }
 </script>
+
 
 <style scoped>
 .card{

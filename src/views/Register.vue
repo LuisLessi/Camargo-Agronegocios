@@ -37,7 +37,7 @@
                     <div _ngcontent-xvm-c52="" class="card">
                         <div _ngcontent-xvm-c52="" class="container mt-2">
                             <p _ngcontent-xvm-c52="" style="font-weight: bold;">DADOS PESSOAIS</p>
-                            <div _ngcontent-xvm-c52="" class="row">
+                            <div _ngcontent-xvm-c52="" class="row" style="background-color: white;">
                                 <div _ngcontent-xvm-c52="" class="col-md-12 col-lg-12 col-sm-12">
                                     <div _ngcontent-xvm-c52="" class="form-group"><label _ngcontent-xvm-c52="">Nome<span
                                                 _ngcontent-xvm-c52="" class="text-danger">*</span></label><input
@@ -180,8 +180,13 @@
                                             <span _ngcontent-xvm-c52="" class="text-danger">*</span></label>
                                         <div _ngcontent-xvm-c52="" class="form-group"><select _ngcontent-xvm-c52=""
                                                 formcontrolname="city_id"
-                                                class="custom-select ng-untouched ng-pristine ng-invalid"><!----></select><app-validation-message
-                                                _ngcontent-xvm-c52=""
+                                                class="custom-select ng-untouched ng-pristine ng-invalid">
+
+                                        <select v-for="cidade in cidades" :key="cidade.id">
+                                        <option v-if="cidade.letter == 'GO'">{{cidade.title}}</option>
+                                        </select>
+                                               
+                                            </select><app-validation-message _ngcontent-xvm-c52=""
                                                 _nghost-xvm-c51=""><!----></app-validation-message></div>
                                     </div>
                                 </div>
@@ -192,7 +197,8 @@
                                             class="form-control ng-untouched ng-pristine ng-valid"></div>
                                 </div>
                                 <div _ngcontent-xvm-c52="" class="col-md-12 col-lg-12 col-sm-12">
-                                    <div _ngcontent-xvm-c52="" class="form-group"><label _ngcontent-xvm-c52="">Celular
+                                    <div _ngcontent-xvm-c52="" class="form-group mb-5"><label
+                                            _ngcontent-xvm-c52="">Celular
                                             <span _ngcontent-xvm-c52="" class="text-danger">*</span></label><input
                                             _ngcontent-xvm-c52="" type="text" mask="(00) 00000-0000"
                                             formcontrolname="cellphone"
@@ -203,11 +209,11 @@
                             </div>
                         </div>
                     </div>
-                    <div _ngcontent-xvm-c52="" class="card mt-3">
+                    <div _ngcontent-xvm-c52="" class="card mt-5">
                         <div _ngcontent-xvm-c52="" class="container mt-2">
                             <p _ngcontent-xvm-c52="" style="font-weight: bold;">DADOS DA PROPRIEDADE</p>
                             <div _ngcontent-xvm-c52="" formgroupname="property"
-                                class="row ng-untouched ng-pristine ng-valid">
+                                class="row ng-untouched ng-pristine ng-valid" style="background-color: white;">
                                 <div _ngcontent-xvm-c52="" class="col-md-12 col-lg-12 col-sm-12">
                                     <div _ngcontent-xvm-c52="" class="form-group"><label _ngcontent-xvm-c52="">Nome da
                                             fazenda </label><input _ngcontent-xvm-c52="" type="text"
@@ -292,7 +298,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div _ngcontent-xvm-c52="" class="col-md-12 col-lg-12 col-sm-12">
+                                <div _ngcontent-xvm-c52="" class="col-md-12 col-lg-12 col-sm-12 mb-5">
                                     <div _ngcontent-xvm-c52="" class="form-group"><label _ngcontent-xvm-c52="">Nº Insc.
                                             Estadual </label><input _ngcontent-xvm-c52="" type="text"
                                             formcontrolname="state_registration"
@@ -307,7 +313,7 @@
                         <div _ngcontent-xvm-c52="" class="container mt-2">
                             <p _ngcontent-xvm-c52="" style="font-weight: bold;">DADOS BANCARIOS</p>
                             <div _ngcontent-xvm-c52="" formgroupname="account"
-                                class="row ng-untouched ng-pristine ng-valid">
+                                class="row ng-untouched ng-pristine ng-valid" style="background-color: white;">
                                 <div _ngcontent-xvm-c52="" class="col-md-5 col-lg-5 col-sm-12">
                                     <div _ngcontent-xvm-c52="" class="form-group"><label
                                             _ngcontent-xvm-c52="">Banco</label>
@@ -601,10 +607,10 @@
                             </div>
                         </div>
                     </div>
-                    <div _ngcontent-xvm-c52="" class="card">
+                    <div _ngcontent-xvm-c52="" class="card mt-5">
                         <div _ngcontent-xvm-c52="" class="container mt-2">
                             <p _ngcontent-xvm-c52="" style="font-weight: bold;">DOCUMENTOS</p>
-                            <div _ngcontent-xvm-c52="" class="row">
+                            <div _ngcontent-xvm-c52="" class="row" style="background-color: white;">
                                 <div _ngcontent-xvm-c52="" class="col-md-12 col-lg-12 col-sm-12">
                                     <div _ngcontent-xvm-c52="" class="form-group"><label
                                             _ngcontent-xvm-c52="">CPF/RG</label>
@@ -654,10 +660,10 @@
                     </div>
                 </div>
                 <div _ngcontent-xvm-c52="" class="col-sm-12 col-md-12 col-lg-12">
-                    <div _ngcontent-xvm-c52="" class="card">
+                    <div _ngcontent-xvm-c52="" class="card mt-3">
                         <div _ngcontent-xvm-c52="" class="container mt-2">
                             <p _ngcontent-xvm-c52="" style="font-weight: bold;">CADASTRO USUÁRIO</p>
-                            <div _ngcontent-xvm-c52="" class="row">
+                            <div _ngcontent-xvm-c52="" class="row" style="background-color: white;">
                                 <div _ngcontent-xvm-c52="" class="col-md-12 col-lg-12 col-sm-12 mb-3">
                                     <div _ngcontent-xvm-c52="" class="custom-control custom-checkbox"><input
                                             _ngcontent-xvm-c52="" type="checkbox" id="customCheck3"
@@ -742,11 +748,22 @@
 </template>
 
 <script>
+import axios from "axios"
+
 export default {
     data() {
         return {
             tipoForm: "PF",
+            cidades:[]
+
         }
+    },
+
+
+    async mounted() {
+        let cidades = await axios.get("https://bis365.com.br/bid365/api/v1/cities");
+        console.log(cidades.data.data)
+        this.cidades = cidades.data.data
     }
 }
 </script>
