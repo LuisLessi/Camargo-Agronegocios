@@ -1,9 +1,5 @@
 <template>
   <Carousel_home/>
-  <h1>Cidades</h1>
-  <ul li v-for="cidade in cidades" :key="cidade.id">
-        <li v-if="cidade.letter == 'GO'">{{ cidade.title }}</li>
-  </ul>
   <div class='row ' >
     <div class='col-sm-6 '>
   <div class="card" >
