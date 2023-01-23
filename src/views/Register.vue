@@ -3,20 +3,19 @@
         <div class="title">
             <h1>Formulário para cadastro</h1>
             <span>Para realizar seu cadastro junto a Camargo Agronegócios, preencha todo formulário abaixo.</span>
+            
+            <input type="file"  ref="file" id="file" name="file" class="file" @change="fileLoad" accept="*" >
 
             <div v-if="tipoForm == 'PF'">
                 <span>Após o preenchimento, favor anexar os documentos para o andamento do cadastro: cópia de RG e CPF,
-                    comprovante de &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspresidência e declaração do
-                    imposto de renda. Ou envie para o e-mail:
-                    <a
-                        href="mailto:atendimento@camargoagronegocios.com.br">atendimento@camargoagronegocios.com.br</a></span>
+                    comprovante de residência e declaração do imposto de renda. Ou envie para o e-mail:
+                    <a href="mailto:atendimento@camargoagronegocios.com.br">atendimento@camargoagronegocios.com.br</a></span>
             </div>
             <div v-else>
                 <span>Após o preenchimento, favor anexar os documentos para o andamento do cadastro: cópia de RG e CPF
-                    do responsável, &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspcontrato social e faturamento
+                    do responsável, contrato social e faturamento
                     da empresa devidamente assinado pelo contador.
-                    Ou envie para o e-mail: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a
-                        href="mailto:atendimento@camargoagronegocios.com.br">atendimento@camargoagronegocios.com.br</a></span>
+                    Ou envie para o e-mail: <a href="mailto:atendimento@camargoagronegocios.com.br">atendimento@camargoagronegocios.com.br</a></span>
             </div>
 
         </div>
@@ -599,7 +598,7 @@
                                 <div _ngcontent-xvm-c52="" class="col-md-6 col-lg-6 col-sm-12">
                                     <div _ngcontent-xvm-c52="" class="form-group"><label _ngcontent-xvm-c52="">Tipo de
                                             conta</label>
-                                        <div _ngcontent-xvm-c52="" class="form-group"><select _ngcontent-xvm-c52=""
+                                        <div _ngcontent-xvm-c52="" class="form-group mb-5"><select _ngcontent-xvm-c52=""
                                                 formcontrolname="type"
                                                 class="custom-select ng-untouched ng-pristine ng-valid">
                                                 <option _ngcontent-xvm-c52="" value="1">Corrente</option>
@@ -617,12 +616,13 @@
                                 <div _ngcontent-xvm-c52="" class="col-md-12 col-lg-12 col-sm-12">
                                     <div _ngcontent-xvm-c52="" class="form-group"><label
                                             _ngcontent-xvm-c52="">CPF/RG</label>
-                                        <div _ngcontent-xvm-c52="" class="row" style="background-color: white;"><!----><!---->
+                                        <div _ngcontent-xvm-c52="" class="row" style="background-color: white;">
+                                            <!----><!---->
                                             <div _ngcontent-xvm-c52="" data-toggle="dropzone"
                                                 data-dropzone-url="http://"
                                                 class="col-md-8 col-lg-8 col-sm-12 dropzone dropzone-single dz-clickable">
                                                 <div _ngcontent-xvm-c52="" class="dz-preview dz-preview-single"></div>
-                                                <div class="dz-default dz-message"><span>Selecione o arquivo.</span>
+                                                <div class="dz-default dz-message" @click="fileLoad"><span>Selecione o arquivo.</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -631,13 +631,14 @@
                                 <div _ngcontent-xvm-c52="" class="col-md-12 col-lg-12 col-sm-12">
                                     <div _ngcontent-xvm-c52="" class="form-group"><label
                                             _ngcontent-xvm-c52="">Declaração de imposto de renda</label>
-                                        <div _ngcontent-xvm-c52="" class="row" style="background-color: white;"><!----><!---->
+                                        <div _ngcontent-xvm-c52="" class="row" style="background-color: white;">
+                                            <!----><!---->
                                             <div _ngcontent-xvm-c52="" data-toggle="dropzone"
                                                 data-dropzone-url="http://"
                                                 class="col-md-8 col-lg-8 col-sm-12 dropzone dropzone-single class-declaracao dz-clickable">
                                                 <div _ngcontent-xvm-c52=""
                                                     class="dz-preview dz-preview-single declaracao"></div>
-                                                <div class="dz-default dz-message"><span>Selecione o arquivo.</span>
+                                                <div class="dz-default dz-message" @click="fileLoad"><span>Selecione o arquivo.</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -646,13 +647,14 @@
                                 <div _ngcontent-xvm-c52="" class="col-md-12 col-lg-12 col-sm-12">
                                     <div _ngcontent-xvm-c52="" class="form-group"><label
                                             _ngcontent-xvm-c52="">Comprovante de residência</label>
-                                        <div _ngcontent-xvm-c52="" class="row" style="background-color: white;"><!----><!---->
+                                        <div _ngcontent-xvm-c52="" class="row mb-5" style="background-color: white;">
+                                            <!----><!---->
                                             <div _ngcontent-xvm-c52="" data-toggle="dropzone"
                                                 data-dropzone-url="http://"
                                                 class="col-md-8 col-lg-8 col-sm-12 dropzone dropzone-single class-residencia dz-clickable">
                                                 <div _ngcontent-xvm-c52=""
                                                     class="dz-preview dz-preview-single residencia"></div>
-                                                <div class="dz-default dz-message"><span>Selecione o arquivo.</span>
+                                                <div class="dz-default dz-message" @click="fileLoad"><span>Selecione o arquivo.</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -704,7 +706,8 @@
                                 <div _ngcontent-xvm-c52="" class="col-md-12 col-sm-12 col-lg-12 mb-4 pb-4">
                                     <div _ngcontent-xvm-c52="" class="custom-control custom-checkbox"><input
                                             _ngcontent-xvm-c52="" type="checkbox" id="customCheck1"
-                                            class="custom-control-input"><label _ngcontent-xvm-c52="" for="customCheck1"
+                                            class="custom-control-input"
+                                            v-model="checked"><label _ngcontent-xvm-c52="" for="customCheck1"
                                             class="custom-control-label" style="font-size: 15px;">Estou de acordo com os
                                             <a _ngcontent-xvm-c52=""
                                                 href="https://bid365.app/storage/termos-condicoes.pdf" target="_blank"
@@ -715,12 +718,19 @@
                             </div>
                         </div>
                     </div>
-                    <div _ngcontent-xvm-c52="" class="d-flex mb-5"
-                        style="justify-content: center; align-items: center; display: flex;"><button
-                            _ngcontent-xvm-c52="" type="button"
-                            class="btn-icon btn-4 btn btn-secondary text-dark mt-4 button ng-star-inserted"
-                            disabled=""><span _ngcontent-xvm-c52="" class="btn-inner--text">ENVIAR
-                                CADASTRO</span></button><!----><!----></div>
+                    <div _ngcontent-vlc-c53="" class="d-flex mb-5"
+                                    style="justify-content: center; align-items: center;">
+                                    <div v-if="checked">
+                                        <button _ngcontent-prl-c56="" type="button" style="background-color: var(--color-background-button);"
+                                            class="btn-icon btn-4 btn btn-secondary text-dark mt-4 button ng-star-inserted"><span
+                                                _ngcontent-prl-c56="" class="btn-inner--text">ENVIAR
+                                                CADASTRO</span></button></div>
+                                       <div v-else>       
+                                        <button _ngcontent-vlc-c53="" type="button"
+                                        class="btn-icon btn-4 btn btn-secondary text-dark mt-4 button ng-star-inserted"
+                                        disabled=""><span _ngcontent-vlc-c53="" class="btn-inner--text">ENVIAR
+                                            CADASTRO</span></button><!----><!----></div>  
+                                </div>
                 </div>
             </div>
         </div>
@@ -734,7 +744,8 @@
                                 <form _ngcontent-vlc-c53="" novalidate="" class="ng-untouched ng-pristine ng-invalid">
                                     <div _ngcontent-vlc-c53="" class="card mb-5">
                                         <div _ngcontent-vlc-c53="" class="container mt-2">
-                                            <div _ngcontent-vlc-c53="" class="form-group"  style="background-color: white;">
+                                            <div _ngcontent-vlc-c53="" class="form-group"
+                                                style="background-color: white;">
                                                 <p _ngcontent-vlc-c53="" style="font-weight: bold;">DADOS PESSOAIS</p>
                                                 <div _ngcontent-vlc-c53="" class="row" style="background-color: white;">
                                                     <div _ngcontent-vlc-c53="" class="col-md-6 col-lg-6 col-sm-12">
@@ -820,8 +831,9 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div _ngcontent-vlc-c53="" class="row" ></div>
-                                                <div _ngcontent-vlc-c53="" class="row mb-5" style="background-color: white;">
+                                                <div _ngcontent-vlc-c53="" class="row"></div>
+                                                <div _ngcontent-vlc-c53="" class="row mb-5"
+                                                    style="background-color: white;">
                                                     <div _ngcontent-vlc-c53="" class="col-md-3 col-lg-3 col-sm-12">
                                                         <div _ngcontent-vlc-c53="" class="form-group"><label
                                                                 _ngcontent-vlc-c53="">Número </label><input
@@ -1194,7 +1206,8 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div _ngcontent-vlc-c53="" class="row mb-5" style="background-color: white;">
+                                                <div _ngcontent-vlc-c53="" class="row mb-5"
+                                                    style="background-color: white;">
                                                     <div _ngcontent-vlc-c53="" class="col-md-7 col-lg-7 col-sm-6">
                                                         <div _ngcontent-vlc-c53="" class="form-group"><label
                                                                 _ngcontent-vlc-c53="">Profissão </label><input
@@ -1220,12 +1233,15 @@
                             <div _ngcontent-vlc-c53="" class="col-md-6 col-lg-6 col-sm-12">
                                 <form _ngcontent-vlc-c53="" novalidate="" class="ng-untouched ng-pristine ng-invalid">
                                     <div _ngcontent-vlc-c53="" class="card mb-5">
-                                        <div _ngcontent-vlc-c53="" class="container mt-2" style="background-color: white;">
+                                        <div _ngcontent-vlc-c53="" class="container mt-2"
+                                            style="background-color: white;">
                                             <p _ngcontent-vlc-c53="" style="font-weight: bold;">DADOS BANCARIOS</p>
-                                            <div _ngcontent-vlc-c53="" class="form-group"  >
+                                            <div _ngcontent-vlc-c53="" class="form-group">
                                                 <div _ngcontent-vlc-c53="" class="row" style="background-color: white;">
-                                                    <div _ngcontent-vlc-c53="" class="col-md-7 col-lg-7 col-sm-12" style="background-color: white;">
-                                                        <div _ngcontent-vlc-c53="" class="form-group" style="background-color: white;"><label
+                                                    <div _ngcontent-vlc-c53="" class="col-md-7 col-lg-7 col-sm-12"
+                                                        style="background-color: white;">
+                                                        <div _ngcontent-vlc-c53="" class="form-group"
+                                                            style="background-color: white;"><label
                                                                 _ngcontent-vlc-c53="">Banco</label>
                                                             <div _ngcontent-vlc-c53="" class="form-group"><select
                                                                     _ngcontent-vlc-c53="" formcontrolname="bank"
@@ -1574,7 +1590,8 @@
                                                         </div>
                                                     </div>
                                                     <div _ngcontent-vlc-c53="" class="container">
-                                                        <div _ngcontent-vlc-c53="" class="row" style="background-color: white;">
+                                                        <div _ngcontent-vlc-c53="" class="row"
+                                                            style="background-color: white;">
                                                             <div _ngcontent-vlc-c53=""
                                                                 class="col-md-3 col-lg-3 col-sm-6">
                                                                 <div _ngcontent-vlc-c53="" class="form-group"><label
@@ -1596,7 +1613,8 @@
                                                                                 Corrente</option>
                                                                             <option _ngcontent-vlc-c53="" value="2">
                                                                                 Poupança</option>
-                                                                        </select></div>
+                                                                        </select>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -1640,7 +1658,8 @@
                                                         _ngcontent-vlc-c53="">Nome </label><input _ngcontent-vlc-c53=""
                                                         type="text" formcontrolname="name_contact2"
                                                         class="form-control ng-untouched ng-pristine ng-valid"></div>
-                                                <div _ngcontent-vlc-c53="" class="row mb-5" style="background-color: white;">
+                                                <div _ngcontent-vlc-c53="" class="row mb-5"
+                                                    style="background-color: white;">
                                                     <div _ngcontent-vlc-c53="" class="col-md-6 col-lg-6 col-sm-6">
                                                         <div _ngcontent-vlc-c53="" class="form-group"><label
                                                                 _ngcontent-vlc-c53="">Telefone 01 </label><input
@@ -1669,13 +1688,14 @@
                                             <div _ngcontent-vlc-c53="" class="col-md-12 col-lg-12 col-sm-12"><label
                                                     _ngcontent-vlc-c53="">CPF/RG administrador</label>
                                                 <div _ngcontent-vlc-c53="" class="form-group">
-                                                    <div _ngcontent-vlc-c53="" class="row" style="background-color: white;"><!----><!---->
+                                                    <div _ngcontent-vlc-c53="" class="row"
+                                                        style="background-color: white;"><!----><!---->
                                                         <div _ngcontent-vlc-c53="" data-toggle="dropzone"
                                                             data-dropzone-url="http://"
                                                             class="col-md-8 col-lg-8 col-sm-12 dropzone dropzone-single class-rgadm dz-clickable">
                                                             <div _ngcontent-vlc-c53=""
                                                                 class="dz-preview dz-preview-single rgadm ml-3"></div>
-                                                            <div class="dz-default dz-message"><span>Selecione o
+                                                            <div class="dz-default dz-message" @click="fileLoad"><span>Selecione o
                                                                     arquivo.</span></div>
                                                         </div>
                                                     </div>
@@ -1684,14 +1704,15 @@
                                             <div _ngcontent-vlc-c53="" class="col-md-12 col-lg-12 col-sm-12">
                                                 <div _ngcontent-vlc-c53="" class="form-group"><label
                                                         _ngcontent-vlc-c53="" class="mt-2">Contrato social</label>
-                                                    <div _ngcontent-vlc-c53="" class="row" style="background-color: white;"><!----><!---->
+                                                    <div _ngcontent-vlc-c53="" class="row"
+                                                        style="background-color: white;"><!----><!---->
                                                         <div _ngcontent-vlc-c53="" data-toggle="dropzone"
                                                             data-dropzone-url="http://"
                                                             class="col-md-8 col-lg-8 col-sm-12 dropzone dropzone-single class-contrato dz-clickable">
                                                             <div _ngcontent-vlc-c53=""
                                                                 class="dz-preview dz-preview-single contrato ml-3">
                                                             </div>
-                                                            <div class="dz-default dz-message"><span>Selecione o
+                                                            <div class="dz-default dz-message" @click="fileLoad"><span>Selecione o
                                                                     arquivo.</span></div>
                                                         </div>
                                                     </div>
@@ -1701,14 +1722,15 @@
                                                 <div _ngcontent-vlc-c53="" class="form-group"><label
                                                         _ngcontent-vlc-c53="" class="mt-2">Faturamento da
                                                         empresa</label>
-                                                    <div _ngcontent-vlc-c53="" class="row mb-5" style="background-color: white;"><!----><!---->
+                                                    <div _ngcontent-vlc-c53="" class="row mb-5"
+                                                        style="background-color: white;"><!----><!---->
                                                         <div _ngcontent-vlc-c53="" data-toggle="dropzone"
                                                             data-dropzone-url="http://"
                                                             class="col-md-8 col-lg-8 col-sm-12 dropzone dropzone-single class-faturamento dz-clickable">
                                                             <div _ngcontent-vlc-c53=""
                                                                 class="dz-preview dz-preview-single faturamento ml-3">
                                                             </div>
-                                                            <div class="dz-default dz-message"><span>Selecione o
+                                                            <div class="dz-default dz-message" @click="fileLoad"><span @click="fileLoad">Selecione o
                                                                     arquivo.</span></div>
                                                         </div>
                                                     </div>
@@ -1774,7 +1796,8 @@
                                                         <div _ngcontent-vlc-c53=""
                                                             class="custom-control custom-checkbox"><input
                                                                 _ngcontent-vlc-c53="" type="checkbox" id="customCheck1"
-                                                                class="custom-control-input"><label
+                                                                class="custom-control-input"
+                                                                v-model="checked"><label
                                                                 _ngcontent-vlc-c53="" for="customCheck1"
                                                                 class="custom-control-label"
                                                                 style="font-size: 15px;">Estou de acordo com os <a
@@ -1791,11 +1814,18 @@
                                     </form>
                                 </div>
                                 <div _ngcontent-vlc-c53="" class="d-flex mb-5"
-                                    style="justify-content: center; align-items: center;"><button _ngcontent-vlc-c53=""
-                                        type="button"
+                                    style="justify-content: center; align-items: center;">
+                                    <div v-if="checked">
+                                        <button _ngcontent-prl-c56="" type="button" style="background-color: var(--color-background-button);"
+                                            class="btn-icon btn-4 btn btn-secondary text-dark mt-4 button ng-star-inserted"><span
+                                                _ngcontent-prl-c56="" class="btn-inner--text">ENVIAR
+                                                CADASTRO</span></button></div>
+                                       <div v-else>       
+                                        <button _ngcontent-vlc-c53="" type="button"
                                         class="btn-icon btn-4 btn btn-secondary text-dark mt-4 button ng-star-inserted"
                                         disabled=""><span _ngcontent-vlc-c53="" class="btn-inner--text">ENVIAR
-                                            CADASTRO</span></button><!----><!----></div>
+                                            CADASTRO</span></button><!----><!----></div>  
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1813,7 +1843,8 @@ export default {
     data() {
         return {
             tipoForm: "PF",
-            cidades: []
+            cidades: [],
+            checked: false,
 
         }
     },
@@ -1823,6 +1854,12 @@ export default {
         let cidades = await axios.get("https://bis365.com.br/bid365/api/v1/cities");
         console.log(cidades.data.data)
         this.cidades = cidades.data.data
+    },
+
+    methods: {
+        fileLoad(){
+        this.$refs.file.click()
+      },
     }
 }
 </script>
@@ -1869,5 +1906,26 @@ a:-webkit-any-link {
 
 .bancario {
     margin-left: 90%;
+}
+.file{
+    display: none;
+}
+.dz-message {
+    padding: 2rem 1rem;
+    background-color: #fff;
+    border: 1px dashed #dee2e6;
+    border-radius: 0.375rem;
+    text-align: center;
+    color: #8898aa;
+    transition: all .15s ease;
+    order: -1;
+    cursor: pointer;
+    z-index: 999;
+}
+@media only screen and (max-width: 1024px) {
+    a:any-link{
+        display: inline-block;
+        font-size: 20px;
+    }
 }
 </style>
