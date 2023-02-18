@@ -16,10 +16,6 @@
 </template>
 
 <script>
-import api from "@/services/api"
-import cidades from "@/services/cidades"
-import axios from "axios"
-import { onMounted } from "vue"
 import Carousel_home from '../components/Carousel_home.vue'
 
 export default {
@@ -27,16 +23,7 @@ export default {
   components: {
     Carousel_home
   },
-  data(){
-    return{
-      cidades:[]
-    }
-  },
- async mounted(){
-  let cidades = await axios.get("https://bis365.com.br/bid365/api/v1/cities");
-  console.log(cidades.data.data)
-  this.cidades = cidades.data.data
- }
+
 }
 </script>
 

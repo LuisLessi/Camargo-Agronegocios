@@ -23,9 +23,9 @@ const routes = [
     component: () => import(/* webpackChunkName: "auctionSchedule" */ '../views/Auction-Schedule.vue')
   },
   {
-    path: '/auctionDetails',
+    path: '/auctionDetails/:id',
     name: 'auctionDetails',
-    component: () => import(/* webpackChunkName: "auctionDetails" */ '../views/Auction-details.vue')
+    component: () => import(/* webpackChunkName: "auctionDetails" */ '../views/Auction-details.vue'),
   },
   {
     path: '/onlineAuction',
