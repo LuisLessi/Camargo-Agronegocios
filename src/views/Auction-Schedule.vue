@@ -56,46 +56,6 @@ a:-webkit-any-link {
     margin-top: 5%;
 }
 
-.btn {
-    background-color: var(--color-background-button);
-    color: black;
-    font-family: "lato";
-    font-weight: bold;
-}
-
-.mid-card {
-    display: flex;
-    justify-content: flex-start;
-}
-
-.mid-card p {
-    margin-left: 5%;
-}
-
-.texto-icon {
-    display: flex;
-    justify-content: flex-start;
-}
-
-.location {
-    width: 15%;
-}
-
-.card {
-    cursor: pointer;
-    background-color: white;
-
-}
-
-.card:hover {
-    background-color: var(--color-background-html);
-}
-
-.date {
-    background-color: var(--color-background-navbar1);
-    border-radius: 5%;
-    height: 25%;
-}
 
 .card-img-sub {
     max-width: 60%;
@@ -105,10 +65,6 @@ a:-webkit-any-link {
 .card-app {
     border: none;
     background-color: var(--color-background-html);
-}
-
-.card:hover {
-    cursor: pointer;
 }
 
 .apps {

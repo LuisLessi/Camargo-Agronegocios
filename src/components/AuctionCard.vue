@@ -31,7 +31,7 @@
               </div>
               <div class="col-8 p-0">
                 <p style="font-size: 18px">
-                  {{ leilao.name }}
+                  {{ truncateText(leilao.name, 19) }}
                 </p>
 
                 <div class="texto-icon">
@@ -106,7 +106,14 @@ export default {
     redirect(id) {
     console.log(`https://camargoagronegocios.com.br/auctionDetails;leilao=%7B%22id%22:${id}`);
     this.$router.push({ name: 'auctionDetails', params: { id } });
-  }
+  },
+
+  truncateText(text, limit) {
+      if (text.length > limit) {
+        return text.slice(0, limit) + '...';
+      }
+      return text;
+    },
   },
 }
 </script>
@@ -127,10 +134,6 @@ a:-webkit-any-link {
     color: black;
 }
 
-.border-left {
-    border-left: 9px solid var(--color-background-button) !important;
-    margin-top: 5%;
-}
 
 .btn {
     background-color: var(--color-background-button);
@@ -173,35 +176,11 @@ a:-webkit-any-link {
     height: 25%;
 }
 
-.card-img-sub {
-    max-width: 60%;
-    margin-left: 20%;
-}
-
-.card-app {
-    border: none;
-    background-color: var(--color-background-html);
-}
 
 .card:hover {
     cursor: pointer;
 }
 
-.apps {
-    margin-right: 0;
-    background-color: var(--color-background-html);
-}
-.patrocinadores{
-    margin-left: 9%
-}
-@media only screen and (max-width: 1024px) {
-.patrocinadores{
-    margin-left: 9%;
 
-}
-.img-patrocinadores{
-max-width: 40%;
 
-}
-}
 </style>

@@ -10,7 +10,7 @@
         </div>
         <div  class="container mapa">
             <span class="title_map">MAPA DO SITE</span><br><br>
-           <a href="#"><span>Home</span></a><br>
+            <router-link to="/"><span>Home</span></router-link><br>
             <router-link to="/auctionSchedule"><a href=""><span>Agenda de leilões</span></a></router-link><br>
             <router-link to="/onlineAuction"><a href=""><span>Pregão online</span></a></router-link><br>
             <router-link to="/results"><a href=""><span>Resultados</span></a><br></router-link>

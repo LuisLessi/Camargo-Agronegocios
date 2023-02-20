@@ -57,6 +57,39 @@
           <div class="card-body">
             <h3 class="card-title">Conteúdo do leilão</h3>
           </div>
+          <div class="row">
+            <div v-if="this.leilao.data.link !== null" class="col-sm-6">
+              <div class="card">
+                <iframe
+                  height="250px"
+                  :src="linkUrl"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+                <p style="font-size: 25px">
+                  {{ leilao.data.name }}
+                </p>
+              </div>
+            </div>
+
+            <div v-if="this.leilao.data.video !== null" class="col-sm-6">
+              <div class="card">
+                <iframe
+                  height="250px"
+                  :src="videoUrl"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+                <p style="font-size: 25px">
+                  {{ leilao.data.name }}
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -67,18 +100,28 @@
 import auctions from "../services/auctions";
 
 export default {
-  name: "AuctionDetails",
   data() {
     return {
       leilao: [],
+      linkUrl: "",
+      videoUrl: "",
     };
   },
 
   async created() {
     const response = await auctions.get(`/${this.$route.params.id}`);
     this.leilao = response.data;
-    console.log(this.leilao.data.name);
+    if (this.leilao.data.link !== null) {
+      const linkId = this.leilao.data.link.match(/(?:v=)([\w-]+)/)[1];
+    this.linkUrl = "https://www.youtube.com/embed/" + linkId;
+    }
+
+    if (this.leilao.data.video !== null) {
+    const videoId = this.leilao.data.video.match(/(?:v=)([\w-]+)/)[1];
+    this.videoUrl = "https://www.youtube.com/embed/" + videoId;
+    }
   },
+
   methods: {
     formatPhoneNumber(phoneNumber) {
       const cleaned = ("" + phoneNumber).replace(/\D/g, "");
@@ -87,18 +130,6 @@ export default {
         return `(${match[1]}) ${match[2]}-${match[3]}`;
       }
       return null;
-    },
-
-    mounted() {
-      window.addEventListener("beforeunload", this.onUnload);
-    },
-
-    methods: {
-      onUnload(event) {
-        event.preventDefault();
-        event.returnValue = "";
-        window.location.href = "/auctionSchedule";
-      },
     },
   },
 };
