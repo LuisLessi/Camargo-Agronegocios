@@ -17,7 +17,7 @@ COPY . .
 RUN npm run build
 
 # Expose the port that the application will run on
-EXPOSE 80
+EXPOSE 8080
 
 # Run the application when the container starts
 CMD [ "node", "server.js" ]
