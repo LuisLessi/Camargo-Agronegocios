@@ -1,20 +1,15 @@
-# Use uma imagem do node
-FROM node
+FROM node:14-alpine
 
-# Defina o diretório de trabalho
-WORKDIR /usr/src/app
+WORKDIR /app
 
-# Copie o package.json e o package-lock.json
 COPY package*.json ./
 
-# Instale as dependências
 RUN npm install
 
-# Copie todos os arquivos da pasta dist para o diretório de trabalho
-COPY dist/ ./
+COPY . .
 
-# Exponha a porta 8080
+RUN npm run build
+
 EXPOSE 8080
 
-# Inicie o aplicativo
-CMD [ "npm", "start" ]
+CMD [ "node", "server.js" ]
