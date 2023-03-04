@@ -1,10 +1,10 @@
-# Defina a imagem base
-FROM node:16-alpine3.14
+# Use uma imagem do node
+FROM node
 
-# Crie o diretório de trabalho
-WORKDIR /app
+# Defina o diretório de trabalho
+WORKDIR /usr/src/app
 
-# Copie o package.json e o package-lock.json para o diretório de trabalho
+# Copie o package.json e o package-lock.json
 COPY package*.json ./
 
 # Instale as dependências
@@ -16,5 +16,5 @@ COPY dist/ ./
 # Exponha a porta 8080
 EXPOSE 8080
 
-# Inicie o servidor web
-CMD ["npm", "run", "start"]
+# Inicie o aplicativo
+CMD [ "npm", "start" ]
