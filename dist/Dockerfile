@@ -1,23 +1,20 @@
-# Use the official Node.js runtime as a parent image
-FROM node:14-alpine
+# Defina a imagem base
+FROM node:16-alpine3.14
 
-# Set the working directory in the container
+# Crie o diretório de trabalho
 WORKDIR /app
 
-# Copy the package.json and package-lock.json files to the container
+# Copie o package.json e o package-lock.json para o diretório de trabalho
 COPY package*.json ./
 
-# Install dependencies
+# Instale as dependências
 RUN npm install
 
-# Copy the rest of the application code to the container
-COPY . .
+# Copie todos os arquivos da pasta dist para o diretório de trabalho
+COPY dist/ ./
 
-# Build the Vue.js application
-RUN npm run build
-
-# Expose the port that the application will run on
+# Exponha a porta 8080
 EXPOSE 8080
 
-# Run the application when the container starts
-CMD [ "node", "server.js" ]
+# Inicie o servidor web
+CMD ["npm", "run", "start"]
